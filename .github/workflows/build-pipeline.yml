@@ -1,0 +1,40 @@
+name: Build and Test Pipeline - Jatin Deswal
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start build
+        run: echo "Starting build process..."
+
+      - name: Simulate compilation
+        run: sleep 3
+
+      - name: Build success
+        run: echo "Build completed successfully"
+
+      - name: Builder name
+        run: echo "Built by Jatin Deswal"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start tests
+        run: echo "Running automated tests..."
+
+      - name: Simulate test execution
+        run: sleep 2
+
+      - name: Print date and time
+        run: date
+
+      - name: Test success
+        run: echo "All tests passed for Jatin Deswal"
